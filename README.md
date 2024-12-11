@@ -2,7 +2,7 @@
 
 Movie Vault – your ultimate destination for discovering and exploring your favorite movies and TV shows!
 
-![](/.github/images/time-tracker-screenshots.png)
+![](/.github/images/screenshots_1.png)
 
 ## Motivation
 
