@@ -1,0 +1,2 @@
+/Users/yusril/FlutterProjects/MovieVault/android/app/.cxx/Debug/3q2c715m/x86/CMakeFiles/edit_cache.dir
+/Users/yusril/FlutterProjects/MovieVault/android/app/.cxx/Debug/3q2c715m/x86/CMakeFiles/rebuild_cache.dir
