@@ -69,10 +69,8 @@ class CarouselRecommendations extends ConsumerWidget {
                       ),
                       // row title - rating score
                       Padding(
-                        padding: const EdgeInsets.only(
-                            bottom: 8, top: 4, left: 12, right: 12),
+                        padding: const EdgeInsets.only(bottom: 8, top: 4, left: 12, right: 12),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Expanded(
                               child: Padding(

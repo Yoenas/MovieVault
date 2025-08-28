@@ -15,7 +15,17 @@ class AccountScreenController extends _$AccountScreenController {
   Future<void> signOut() async {
     final authRepository = ref.read(authRepositoryProvider);
     state = const AsyncValue.loading();
-    state = await AsyncValue.guard(authRepository.signOut);
+    state = await AsyncValue.guard(() {
+      return authRepository.signOut();
+    });
+  }
+
+  Future<void> deleteAccount() async {
+    final authRepository = ref.read(authRepositoryProvider);
+    state = const AsyncValue.loading();
+    state = await AsyncValue.guard(() {
+      return authRepository.deleteAccount();
+    });
   }
 }
 

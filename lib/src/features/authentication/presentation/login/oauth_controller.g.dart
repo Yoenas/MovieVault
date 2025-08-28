@@ -1,27 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'agreement_controller.dart';
+part of 'oauth_controller.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$agreementControllerHash() =>
-    r'66f80c87e01b44bf5455d7846e50007405cdd245';
+String _$oAuthControllerHash() => r'286926a2cb2cac209166eea597ee257915fb1a91';
 
-/// See also [AgreementController].
-@ProviderFor(AgreementController)
-final agreementControllerProvider =
-    AutoDisposeAsyncNotifierProvider<AgreementController, void>.internal(
-  AgreementController.new,
-  name: r'agreementControllerProvider',
+/// See also [OAuthController].
+@ProviderFor(OAuthController)
+final oAuthControllerProvider =
+    AutoDisposeAsyncNotifierProvider<OAuthController, void>.internal(
+  OAuthController.new,
+  name: r'oAuthControllerProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$agreementControllerHash,
+      : _$oAuthControllerHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$AgreementController = AutoDisposeAsyncNotifier<void>;
+typedef _$OAuthController = AutoDisposeAsyncNotifier<void>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package

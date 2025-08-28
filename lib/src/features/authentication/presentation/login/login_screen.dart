@@ -34,14 +34,14 @@ class LoginScreen extends StatelessWidget {
                 child: FormLogin(),
               ),
               // --or-- Section
-              // const SizedBox(height: 16),
-              // const OrSection(),
-              // const SizedBox(height: 32),
-              // // Sign In With Account Google/Apple/Facebook
-              // const SizedBox(
-              //   width: 500,
-              //   child: BindAccount(),
-              // ),
+              const SizedBox(height: 16),
+              const OrSection(),
+              const SizedBox(height: 32),
+              // Sign In With Account Google/Apple/Facebook
+              const SizedBox(
+                width: 500,
+                child: LoginSSO(),
+              ),
               // Sign Up Button Option
               SizedBox(
                 width: 500,

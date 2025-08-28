@@ -48,9 +48,9 @@ class CustomImageCarousel extends ConsumerWidget {
                   colors: [
                     MyColors.primary,
                     MyColors.primary,
-                    const Color(0xFF1D51FE).withOpacity(0.75),
-                    const Color(0xFF1D51FE).withOpacity(0.5),
-                    const Color(0xFF1D51FE).withOpacity(0),
+                    const Color(0xFF1D51FE).withValues(alpha: 0.75),
+                    const Color(0xFF1D51FE).withValues(alpha: 0.5),
+                    const Color(0xFF1D51FE).withValues(alpha: 0),
                   ],
                 ),
               ),
@@ -59,7 +59,7 @@ class CustomImageCarousel extends ConsumerWidget {
           Positioned(
             top: 16,
             left: 16,
-            bottom: 16,
+            bottom: 12,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,

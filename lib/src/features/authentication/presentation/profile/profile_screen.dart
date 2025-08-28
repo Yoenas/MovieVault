@@ -7,7 +7,6 @@ class ProfileScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final authState = ref.watch(authStateChangesProvider);
-
     return authState.maybeWhen(
       data: (user) {
         return user != null ? const AccountScreen() : const LoginScreen();
@@ -35,40 +34,4 @@ class ProfileScreen extends ConsumerWidget {
       },
     );
   }
-  //  Scaffold(
-  //   appBar: _profileAppBar(context),
-  //   body: Padding(
-  //     padding: const EdgeInsets.all(16.0),
-  //     child: Column(
-  //       crossAxisAlignment: CrossAxisAlignment.center,
-  //       mainAxisAlignment: MainAxisAlignment.center,
-  //       children: [
-  //         SizedBox(
-  //           width: 500,
-  //           child: ElevatedButton(
-  //             onPressed: () {
-  //               navigatePushTo(context,
-  //                   destination: const LoginScreen());
-  //             },
-  //             style: Theme.of(context).elevatedButtonTheme.style,
-  //             child: Text('Sign In'),
-  //           ),
-  //         ),
-  //         const SizedBox(height: 16),
-  //         const OrSection(),
-  //         const SizedBox(height: 16),
-  //         SizedBox(
-  //           width: 500,
-  //           child: OutlinedButton(
-  //             onPressed: () {
-  //               navigatePushTo(context,
-  //                   destination: const RegisterScreen());
-  //             },
-  //             child: Text('Create an Account'),
-  //           ),
-  //         ),
-  //       ],
-  //     ),
-  //   ),
-  // );
 }

@@ -1,7 +1,7 @@
 import 'package:movie_vault/src/commons.dart';
 
-class BuilderButtonBindAccount extends StatelessWidget {
-  const BuilderButtonBindAccount(
+class BuilderButtonOAuth extends StatelessWidget {
+  const BuilderButtonOAuth(
       {super.key,
       required this.svgIcon,
       required this.accountType,

@@ -1,3 +1,4 @@
+import 'package:movie_vault/src/common_widgets/avatar_cached_image_builder.dart';
 import 'package:movie_vault/src/commons.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -20,13 +21,14 @@ class AccountScreen extends ConsumerWidget {
                   ?.copyWith(fontWeight: FontWeight.bold),
             ),
             actions: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.more_vert,
-                  color: MyColors.greyScale50,
-                ),
-              ),
+              // FIXME: Uncomment when the feature is available
+              // IconButton(
+              //   onPressed: () {},
+              //   icon: Icon(
+              //     Icons.more_vert,
+              //     color: MyColors.greyScale50,
+              //   ),
+              // ),
             ],
             bottom: PreferredSize(
               preferredSize: Size.fromHeight(0),
@@ -68,15 +70,10 @@ class AccountScreen extends ConsumerWidget {
                                     ),
                               ),
                             )
-                          : CachedImageNetworkBuilder(
-                              dataUser.imageUrl,
+                          : AvatarCachedImageBuilder(
                               height: 50,
                               width: 50,
-                              onImageBuilder: (context, imageProvider) {
-                                return CircleAvatar(
-                                  backgroundImage: imageProvider,
-                                );
-                              },
+                              imageUrl: dataUser.imageUrl,
                             ),
                     ),
                   ),
@@ -106,11 +103,64 @@ class AccountScreen extends ConsumerWidget {
                       child: ElevatedButton(
                         onPressed: state.isLoading
                             ? null
-                            : () => FirebaseAuth.instance.signOut(),
+                            : () => ref
+                                .read(accountScreenControllerProvider.notifier)
+                                .signOut(),
                         style: Theme.of(context).elevatedButtonTheme.style,
                         child: state.isLoading
                             ? CircularProgressIndicator()
                             : Text('Sign Out'),
+                      ),
+                    ),
+                  ),
+
+                  // Delete Account
+                  const SizedBox(height: 8),
+                  Center(
+                    child: SizedBox(
+                      width: 500,
+                      child: TextButton(
+                        onPressed: state.isLoading
+                            ? null
+                            : () async {
+                                final shouldDelete = await showDialog<bool>(
+                                  context: context,
+                                  builder: (context) => AlertDialog(
+                                    title: const Text("Delete Account"),
+                                    content: const Text(
+                                        "Are you sure you want to delete your account? This action cannot be undone."),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.of(context).pop(false),
+                                        child: const Text("Cancel"),
+                                      ),
+                                      TextButton(
+                                        onPressed: () =>
+                                            Navigator.of(context).pop(true),
+                                        child: const Text(
+                                          "Delete",
+                                          style: TextStyle(color: Colors.red),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+
+                                if (shouldDelete == true) {
+                                  // Trigger delete account
+                                  await ref
+                                      .read(accountScreenControllerProvider
+                                          .notifier)
+                                      .deleteAccount();
+                                }
+                              },
+                        child: state.isLoading
+                            ? CircularProgressIndicator()
+                            : Text(
+                                'Delete Account',
+                                style: TextStyle(color: MyColors.error),
+                              ),
                       ),
                     ),
                   ),

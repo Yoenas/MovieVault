@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:movie_vault/src/common_widgets/avatar_cached_image_builder.dart';
 import 'package:movie_vault/src/commons.dart';
 
 class TitleDashboard extends ConsumerWidget {
@@ -48,17 +49,8 @@ class TitleAppBar extends StatelessWidget {
                 child: SvgPicture.asset('assets/svg/bottom_nav/ic_user.svg',
                     width: 35, height: 35),
               )
-            : CachedImageNetworkBuilder(
-                userData!.imageUrl,
-                height: 35,
-                width: 35,
-                onImageBuilder: (context, imageProvider) {
-                  return CircleAvatar(
-                    radius: 25,
-                    backgroundImage: imageProvider,
-                  );
-                },
-              ),
+            : AvatarCachedImageBuilder(
+                imageUrl: userData!.imageUrl, height: 35, width: 35),
         const SizedBox(width: 8),
         Expanded(
           child: Column(

@@ -10,10 +10,11 @@ class DashboardScreen extends StatelessWidget {
       appBar: AppBar(
         title: const TitleDashboard(),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.settings_outlined, color: MyColors.greyScale50),
-          ),
+          // FIXME: Uncomment when the feature is available
+          // IconButton(
+          //   onPressed: () {},
+          //   icon: Icon(Icons.settings_outlined, color: MyColors.greyScale50),
+          // ),
         ],
       ),
       body: NestedScrollView(

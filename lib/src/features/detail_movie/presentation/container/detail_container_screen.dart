@@ -52,7 +52,7 @@ class _DetailContainerScreenState extends DetailContainerController {
                           color: Theme.of(context)
                               .colorScheme
                               .surface
-                              .withOpacity(0.6),
+                              .withValues(alpha: 0.6),
                         ),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
