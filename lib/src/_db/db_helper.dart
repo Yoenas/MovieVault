@@ -36,7 +36,7 @@ class DatabaseHelper {
     return db;
   }
 
-  FutureOr<void> _createTable(db, version) async {
+  FutureOr<void> _createTable(sql.Database db, int version) async {
     Batch batch = db.batch();
     batch.execute('''
       CREATE TABLE $_moviesTable (

@@ -4,7 +4,7 @@ part 'list_review.freezed.dart';
 part 'list_review.g.dart';
 
 @freezed
-class ListReview with _$ListReview {
+abstract class ListReview with _$ListReview {
   const factory ListReview({
     required int id, // id movie
     @Default([]) List<Review> results,
@@ -15,7 +15,7 @@ class ListReview with _$ListReview {
 }
 
 @freezed
-class Review with _$Review {
+abstract class Review with _$Review {
   const factory Review({
     required String id, // id review
     required String author,
@@ -29,7 +29,7 @@ class Review with _$Review {
 }
 
 @freezed
-class AuthorDetails with _$AuthorDetails {
+abstract class AuthorDetails with _$AuthorDetails {
   const factory AuthorDetails({
     String? name,
     String? username,

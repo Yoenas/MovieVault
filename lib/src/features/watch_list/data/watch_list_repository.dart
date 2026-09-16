@@ -19,7 +19,7 @@ class LocalWatchListRepository {
             : dataDetail.detailTv!.toMap(),
       );
 
-  Future<List<BookmarkData>> fetchWatchList({required mediaType}) =>
+  Future<List<BookmarkData>> fetchWatchList({required String mediaType}) =>
       dbHelper.fetchWatchList(
         mediaType: mediaType,
         mapper: (data) {

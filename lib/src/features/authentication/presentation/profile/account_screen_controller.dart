@@ -1,4 +1,5 @@
 import 'package:movie_vault/src/features/authentication/domain/user_data.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 import '../../data/auth_repository.dart';

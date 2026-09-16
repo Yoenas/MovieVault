@@ -74,12 +74,12 @@ class MoviesService {
   }
 }
 
-final indexCategoryMovieProvider = StateProvider<int>((ref) {
-  return 0;
+final indexCategoryMovieProvider = NotifierProvider<GenericStateNotifier<int>, int>(() {
+  return GenericStateNotifier<int>(() => 0);
 });
 
-final indexCategoryTvSeriesProvider = StateProvider<int>((ref) {
-  return 0;
+final indexCategoryTvSeriesProvider = NotifierProvider<GenericStateNotifier<int>, int>(() {
+  return GenericStateNotifier<int>(() => 0);
 });
 
 final moviesServiceProvider = Provider<MoviesService>((ref) {

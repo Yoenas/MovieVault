@@ -4,7 +4,7 @@ part 'trending_list.freezed.dart';
 part 'trending_list.g.dart';
 
 @freezed
-class TrendingList with _$TrendingList {
+abstract class TrendingList with _$TrendingList {
   const factory TrendingList({
     required List<Trending> results,
   }) = _TrendingList;
@@ -14,7 +14,7 @@ class TrendingList with _$TrendingList {
 }
 
 @freezed
-class Trending with _$Trending {
+abstract class Trending with _$Trending {
   const factory Trending({
     required int id,
     @JsonKey(name: "overview") String? overview,

@@ -4,7 +4,7 @@ part 'tv_list.freezed.dart';
 part 'tv_list.g.dart';
 
 @freezed
-class Tv with _$Tv {
+abstract class Tv with _$Tv {
   factory Tv({
     // update any properties as needed
     // after update run the code generator again:
@@ -27,7 +27,7 @@ class Tv with _$Tv {
 
 /// List Tv Series parsed from the API response (not used directly in the UI)
 @freezed
-class TvList with _$TvList {
+abstract class TvList with _$TvList {
   factory TvList({required List<Tv> results}) = _TvList;
 
   factory TvList.fromJson(Map<String, dynamic> json) => _$TvListFromJson(json);

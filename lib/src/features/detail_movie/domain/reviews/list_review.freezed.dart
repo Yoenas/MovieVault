@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'list_review.dart';
@@ -9,683 +9,868 @@ part of 'list_review.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-ListReview _$ListReviewFromJson(Map<String, dynamic> json) {
-  return _ListReview.fromJson(json);
-}
 
 /// @nodoc
 mixin _$ListReview {
-  int get id => throw _privateConstructorUsedError; // id movie
-  List<Review> get results => throw _privateConstructorUsedError;
+
+ int get id; List<Review> get results;
+/// Create a copy of ListReview
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ListReviewCopyWith<ListReview> get copyWith => _$ListReviewCopyWithImpl<ListReview>(this as ListReview, _$identity);
 
   /// Serializes this ListReview to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of ListReview
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $ListReviewCopyWith<ListReview> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as ListReview;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is ListReview&&(identical(other.id, _this.id) || other.id == _this.id)&&const DeepCollectionEquality().equals(other.results, _this.results));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as ListReview;
+  return Object.hash(runtimeType,_this.id,const DeepCollectionEquality().hash(_this.results));
+}
+
+@override
+String toString() {
+  final _this = this as ListReview;
+  return 'ListReview(id: ${_this.id}, results: ${_this.results})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ListReviewCopyWith<$Res> {
-  factory $ListReviewCopyWith(
-          ListReview value, $Res Function(ListReview) then) =
-      _$ListReviewCopyWithImpl<$Res, ListReview>;
-  @useResult
-  $Res call({int id, List<Review> results});
-}
+abstract mixin class $ListReviewCopyWith<$Res>  {
+  factory $ListReviewCopyWith(ListReview value, $Res Function(ListReview) _then) = _$ListReviewCopyWithImpl;
+@useResult
+$Res call({
+ int id, List<Review> results
+});
 
+
+
+
+}
 /// @nodoc
-class _$ListReviewCopyWithImpl<$Res, $Val extends ListReview>
+class _$ListReviewCopyWithImpl<$Res>
     implements $ListReviewCopyWith<$Res> {
-  _$ListReviewCopyWithImpl(this._value, this._then);
+  _$ListReviewCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final ListReview _self;
+  final $Res Function(ListReview) _then;
 
-  /// Create a copy of ListReview
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? results = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      results: null == results
-          ? _value.results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Review>,
-    ) as $Val);
-  }
+/// Create a copy of ListReview
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? results = null,}) {
+  return _then(ListReview(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int,results: null == results ? _self.results : results // ignore: cast_nullable_to_non_nullable
+as List<Review>,
+  ));
 }
 
-/// @nodoc
-abstract class _$$ListReviewImplCopyWith<$Res>
-    implements $ListReviewCopyWith<$Res> {
-  factory _$$ListReviewImplCopyWith(
-          _$ListReviewImpl value, $Res Function(_$ListReviewImpl) then) =
-      __$$ListReviewImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int id, List<Review> results});
 }
 
-/// @nodoc
-class __$$ListReviewImplCopyWithImpl<$Res>
-    extends _$ListReviewCopyWithImpl<$Res, _$ListReviewImpl>
-    implements _$$ListReviewImplCopyWith<$Res> {
-  __$$ListReviewImplCopyWithImpl(
-      _$ListReviewImpl _value, $Res Function(_$ListReviewImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of ListReview
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? results = null,
-  }) {
-    return _then(_$ListReviewImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-      results: null == results
-          ? _value._results
-          : results // ignore: cast_nullable_to_non_nullable
-              as List<Review>,
-    ));
-  }
+/// Adds pattern-matching-related methods to [ListReview].
+extension ListReviewPatterns on ListReview {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _ListReview value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _ListReview() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _ListReview value)  $default,){
+final _that = this;
+switch (_that) {
+case _ListReview():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _ListReview value)?  $default,){
+final _that = this;
+switch (_that) {
+case _ListReview() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( int id,  List<Review> results)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _ListReview() when $default != null:
+return $default(_that.id,_that.results);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( int id,  List<Review> results)  $default,) {final _that = this;
+switch (_that) {
+case _ListReview():
+return $default(_that.id,_that.results);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( int id,  List<Review> results)?  $default,) {final _that = this;
+switch (_that) {
+case _ListReview() when $default != null:
+return $default(_that.id,_that.results);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ListReviewImpl implements _ListReview {
-  const _$ListReviewImpl(
-      {required this.id, final List<Review> results = const []})
-      : _results = results;
 
-  factory _$ListReviewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ListReviewImplFromJson(json);
+class _ListReview implements ListReview {
+  const _ListReview({required this.id,  List<Review> results = const []}): _results = results;
+  factory _ListReview.fromJson(Map<String, dynamic> json) => _$ListReviewFromJson(json);
 
-  @override
-  final int id;
-// id movie
-  final List<Review> _results;
-// id movie
-  @override
-  @JsonKey()
-  List<Review> get results {
-    if (_results is EqualUnmodifiableListView) return _results;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_results);
-  }
+@override final  int id;
+ final  List<Review> _results;
+@override@JsonKey() List<Review> get results {
+  if (_results is EqualUnmodifiableListView) return _results;
+  // ignore: implicit_dynamic_type
+  return EqualUnmodifiableListView(_results);
+}
 
-  @override
-  String toString() {
+
+/// Create a copy of ListReview
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ListReviewCopyWith<_ListReview> get copyWith => __$ListReviewCopyWithImpl<_ListReview>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ListReviewToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _ListReview&&(identical(other.id, id) || other.id == id)&&const DeepCollectionEquality().equals(other.results, _results));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,id,const DeepCollectionEquality().hash(_results));
+}
+
+@override
+String toString() {
     return 'ListReview(id: $id, results: $results)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ListReviewImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            const DeepCollectionEquality().equals(other._results, _results));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, id, const DeepCollectionEquality().hash(_results));
-
-  /// Create a copy of ListReview
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ListReviewImplCopyWith<_$ListReviewImpl> get copyWith =>
-      __$$ListReviewImplCopyWithImpl<_$ListReviewImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ListReviewImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _ListReview implements ListReview {
-  const factory _ListReview(
-      {required final int id, final List<Review> results}) = _$ListReviewImpl;
 
-  factory _ListReview.fromJson(Map<String, dynamic> json) =
-      _$ListReviewImpl.fromJson;
-
-  @override
-  int get id; // id movie
-  @override
-  List<Review> get results;
-
-  /// Create a copy of ListReview
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ListReviewImplCopyWith<_$ListReviewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
-Review _$ReviewFromJson(Map<String, dynamic> json) {
-  return _Review.fromJson(json);
+/// @nodoc
+abstract mixin class _$ListReviewCopyWith<$Res> implements $ListReviewCopyWith<$Res> {
+  factory _$ListReviewCopyWith(_ListReview value, $Res Function(_ListReview) _then) = __$ListReviewCopyWithImpl;
+@override @useResult
+$Res call({
+ int id, List<Review> results
+});
+
+
+
+
 }
+/// @nodoc
+class __$ListReviewCopyWithImpl<$Res>
+    implements _$ListReviewCopyWith<$Res> {
+  __$ListReviewCopyWithImpl(this._self, this._then);
+
+  final _ListReview _self;
+  final $Res Function(_ListReview) _then;
+
+/// Create a copy of ListReview
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? results = null,}) {
+  return _then(_ListReview(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as int,results: null == results ? _self._results : results // ignore: cast_nullable_to_non_nullable
+as List<Review>,
+  ));
+}
+
+
+}
+
 
 /// @nodoc
 mixin _$Review {
-  String get id => throw _privateConstructorUsedError; // id review
-  String get author => throw _privateConstructorUsedError;
-  String? get content => throw _privateConstructorUsedError;
-  @JsonKey(name: "created_at")
-  String? get createdAt => throw _privateConstructorUsedError;
-  @JsonKey(name: "updated_at")
-  String? get updatedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: "author_details")
-  AuthorDetails get authorDetails => throw _privateConstructorUsedError;
+
+ String get id; String get author; String? get content;@JsonKey(name: "created_at") String? get createdAt;@JsonKey(name: "updated_at") String? get updatedAt;@JsonKey(name: "author_details") AuthorDetails get authorDetails;
+/// Create a copy of Review
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$ReviewCopyWith<Review> get copyWith => _$ReviewCopyWithImpl<Review>(this as Review, _$identity);
 
   /// Serializes this Review to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of Review
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $ReviewCopyWith<Review> get copyWith => throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as Review;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is Review&&(identical(other.id, _this.id) || other.id == _this.id)&&(identical(other.author, _this.author) || other.author == _this.author)&&(identical(other.content, _this.content) || other.content == _this.content)&&(identical(other.createdAt, _this.createdAt) || other.createdAt == _this.createdAt)&&(identical(other.updatedAt, _this.updatedAt) || other.updatedAt == _this.updatedAt)&&(identical(other.authorDetails, _this.authorDetails) || other.authorDetails == _this.authorDetails));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as Review;
+  return Object.hash(runtimeType,_this.id,_this.author,_this.content,_this.createdAt,_this.updatedAt,_this.authorDetails);
+}
+
+@override
+String toString() {
+  final _this = this as Review;
+  return 'Review(id: ${_this.id}, author: ${_this.author}, content: ${_this.content}, createdAt: ${_this.createdAt}, updatedAt: ${_this.updatedAt}, authorDetails: ${_this.authorDetails})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $ReviewCopyWith<$Res> {
-  factory $ReviewCopyWith(Review value, $Res Function(Review) then) =
-      _$ReviewCopyWithImpl<$Res, Review>;
-  @useResult
-  $Res call(
-      {String id,
-      String author,
-      String? content,
-      @JsonKey(name: "created_at") String? createdAt,
-      @JsonKey(name: "updated_at") String? updatedAt,
-      @JsonKey(name: "author_details") AuthorDetails authorDetails});
+abstract mixin class $ReviewCopyWith<$Res>  {
+  factory $ReviewCopyWith(Review value, $Res Function(Review) _then) = _$ReviewCopyWithImpl;
+@useResult
+$Res call({
+ String id, String author, String? content,@JsonKey(name: "created_at") String? createdAt,@JsonKey(name: "updated_at") String? updatedAt,@JsonKey(name: "author_details") AuthorDetails authorDetails
+});
 
-  $AuthorDetailsCopyWith<$Res> get authorDetails;
+
+$AuthorDetailsCopyWith<$Res> get authorDetails;
+
 }
-
 /// @nodoc
-class _$ReviewCopyWithImpl<$Res, $Val extends Review>
+class _$ReviewCopyWithImpl<$Res>
     implements $ReviewCopyWith<$Res> {
-  _$ReviewCopyWithImpl(this._value, this._then);
+  _$ReviewCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final Review _self;
+  final $Res Function(Review) _then;
 
-  /// Create a copy of Review
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? author = null,
-    Object? content = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-    Object? authorDetails = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      author: null == author
-          ? _value.author
-          : author // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: freezed == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      authorDetails: null == authorDetails
-          ? _value.authorDetails
-          : authorDetails // ignore: cast_nullable_to_non_nullable
-              as AuthorDetails,
-    ) as $Val);
-  }
-
-  /// Create a copy of Review
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $AuthorDetailsCopyWith<$Res> get authorDetails {
-    return $AuthorDetailsCopyWith<$Res>(_value.authorDetails, (value) {
-      return _then(_value.copyWith(authorDetails: value) as $Val);
-    });
-  }
+/// Create a copy of Review
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? id = null,Object? author = null,Object? content = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? authorDetails = null,}) {
+  return _then(Review(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,author: null == author ? _self.author : author // ignore: cast_nullable_to_non_nullable
+as String,content: freezed == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
+as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as String?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as String?,authorDetails: null == authorDetails ? _self.authorDetails : authorDetails // ignore: cast_nullable_to_non_nullable
+as AuthorDetails,
+  ));
+}
+/// Create a copy of Review
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AuthorDetailsCopyWith<$Res> get authorDetails {
+  
+  return $AuthorDetailsCopyWith<$Res>(_self.authorDetails, (value) {
+    return _then(_self.copyWith(authorDetails: value));
+  });
+}
 }
 
-/// @nodoc
-abstract class _$$ReviewImplCopyWith<$Res> implements $ReviewCopyWith<$Res> {
-  factory _$$ReviewImplCopyWith(
-          _$ReviewImpl value, $Res Function(_$ReviewImpl) then) =
-      __$$ReviewImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String id,
-      String author,
-      String? content,
-      @JsonKey(name: "created_at") String? createdAt,
-      @JsonKey(name: "updated_at") String? updatedAt,
-      @JsonKey(name: "author_details") AuthorDetails authorDetails});
 
-  @override
-  $AuthorDetailsCopyWith<$Res> get authorDetails;
+/// Adds pattern-matching-related methods to [Review].
+extension ReviewPatterns on Review {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _Review value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _Review() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _Review value)  $default,){
+final _that = this;
+switch (_that) {
+case _Review():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _Review value)?  $default,){
+final _that = this;
+switch (_that) {
+case _Review() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String id,  String author,  String? content, @JsonKey(name: "created_at")  String? createdAt, @JsonKey(name: "updated_at")  String? updatedAt, @JsonKey(name: "author_details")  AuthorDetails authorDetails)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _Review() when $default != null:
+return $default(_that.id,_that.author,_that.content,_that.createdAt,_that.updatedAt,_that.authorDetails);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String id,  String author,  String? content, @JsonKey(name: "created_at")  String? createdAt, @JsonKey(name: "updated_at")  String? updatedAt, @JsonKey(name: "author_details")  AuthorDetails authorDetails)  $default,) {final _that = this;
+switch (_that) {
+case _Review():
+return $default(_that.id,_that.author,_that.content,_that.createdAt,_that.updatedAt,_that.authorDetails);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String id,  String author,  String? content, @JsonKey(name: "created_at")  String? createdAt, @JsonKey(name: "updated_at")  String? updatedAt, @JsonKey(name: "author_details")  AuthorDetails authorDetails)?  $default,) {final _that = this;
+switch (_that) {
+case _Review() when $default != null:
+return $default(_that.id,_that.author,_that.content,_that.createdAt,_that.updatedAt,_that.authorDetails);case _:
+  return null;
+
+}
 }
 
-/// @nodoc
-class __$$ReviewImplCopyWithImpl<$Res>
-    extends _$ReviewCopyWithImpl<$Res, _$ReviewImpl>
-    implements _$$ReviewImplCopyWith<$Res> {
-  __$$ReviewImplCopyWithImpl(
-      _$ReviewImpl _value, $Res Function(_$ReviewImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of Review
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-    Object? author = null,
-    Object? content = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-    Object? authorDetails = null,
-  }) {
-    return _then(_$ReviewImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      author: null == author
-          ? _value.author
-          : author // ignore: cast_nullable_to_non_nullable
-              as String,
-      content: freezed == content
-          ? _value.content
-          : content // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as String?,
-      authorDetails: null == authorDetails
-          ? _value.authorDetails
-          : authorDetails // ignore: cast_nullable_to_non_nullable
-              as AuthorDetails,
-    ));
-  }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ReviewImpl implements _Review {
-  const _$ReviewImpl(
-      {required this.id,
-      required this.author,
-      this.content,
-      @JsonKey(name: "created_at") this.createdAt,
-      @JsonKey(name: "updated_at") this.updatedAt,
-      @JsonKey(name: "author_details") required this.authorDetails});
 
-  factory _$ReviewImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ReviewImplFromJson(json);
+class _Review implements Review {
+  const _Review({required this.id, required this.author, this.content, @JsonKey(name: "created_at") this.createdAt, @JsonKey(name: "updated_at") this.updatedAt, @JsonKey(name: "author_details") required this.authorDetails});
+  factory _Review.fromJson(Map<String, dynamic> json) => _$ReviewFromJson(json);
 
-  @override
-  final String id;
-// id review
-  @override
-  final String author;
-  @override
-  final String? content;
-  @override
-  @JsonKey(name: "created_at")
-  final String? createdAt;
-  @override
-  @JsonKey(name: "updated_at")
-  final String? updatedAt;
-  @override
-  @JsonKey(name: "author_details")
-  final AuthorDetails authorDetails;
+@override final  String id;
+@override final  String author;
+@override final  String? content;
+@override@JsonKey(name: "created_at") final  String? createdAt;
+@override@JsonKey(name: "updated_at") final  String? updatedAt;
+@override@JsonKey(name: "author_details") final  AuthorDetails authorDetails;
 
-  @override
-  String toString() {
+/// Create a copy of Review
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$ReviewCopyWith<_Review> get copyWith => __$ReviewCopyWithImpl<_Review>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$ReviewToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _Review&&(identical(other.id, id) || other.id == id)&&(identical(other.author, author) || other.author == author)&&(identical(other.content, content) || other.content == content)&&(identical(other.createdAt, createdAt) || other.createdAt == createdAt)&&(identical(other.updatedAt, updatedAt) || other.updatedAt == updatedAt)&&(identical(other.authorDetails, authorDetails) || other.authorDetails == authorDetails));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,id,author,content,createdAt,updatedAt,authorDetails);
+}
+
+@override
+String toString() {
     return 'Review(id: $id, author: $author, content: $content, createdAt: $createdAt, updatedAt: $updatedAt, authorDetails: $authorDetails)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$ReviewImpl &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.author, author) || other.author == author) &&
-            (identical(other.content, content) || other.content == content) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt) &&
-            (identical(other.authorDetails, authorDetails) ||
-                other.authorDetails == authorDetails));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType, id, author, content, createdAt, updatedAt, authorDetails);
-
-  /// Create a copy of Review
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$ReviewImplCopyWith<_$ReviewImpl> get copyWith =>
-      __$$ReviewImplCopyWithImpl<_$ReviewImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$ReviewImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _Review implements Review {
-  const factory _Review(
-      {required final String id,
-      required final String author,
-      final String? content,
-      @JsonKey(name: "created_at") final String? createdAt,
-      @JsonKey(name: "updated_at") final String? updatedAt,
-      @JsonKey(name: "author_details")
-      required final AuthorDetails authorDetails}) = _$ReviewImpl;
 
-  factory _Review.fromJson(Map<String, dynamic> json) = _$ReviewImpl.fromJson;
-
-  @override
-  String get id; // id review
-  @override
-  String get author;
-  @override
-  String? get content;
-  @override
-  @JsonKey(name: "created_at")
-  String? get createdAt;
-  @override
-  @JsonKey(name: "updated_at")
-  String? get updatedAt;
-  @override
-  @JsonKey(name: "author_details")
-  AuthorDetails get authorDetails;
-
-  /// Create a copy of Review
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ReviewImplCopyWith<_$ReviewImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
-AuthorDetails _$AuthorDetailsFromJson(Map<String, dynamic> json) {
-  return _AuthorDetails.fromJson(json);
+/// @nodoc
+abstract mixin class _$ReviewCopyWith<$Res> implements $ReviewCopyWith<$Res> {
+  factory _$ReviewCopyWith(_Review value, $Res Function(_Review) _then) = __$ReviewCopyWithImpl;
+@override @useResult
+$Res call({
+ String id, String author, String? content,@JsonKey(name: "created_at") String? createdAt,@JsonKey(name: "updated_at") String? updatedAt,@JsonKey(name: "author_details") AuthorDetails authorDetails
+});
+
+
+@override $AuthorDetailsCopyWith<$Res> get authorDetails;
+
 }
+/// @nodoc
+class __$ReviewCopyWithImpl<$Res>
+    implements _$ReviewCopyWith<$Res> {
+  __$ReviewCopyWithImpl(this._self, this._then);
+
+  final _Review _self;
+  final $Res Function(_Review) _then;
+
+/// Create a copy of Review
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? id = null,Object? author = null,Object? content = freezed,Object? createdAt = freezed,Object? updatedAt = freezed,Object? authorDetails = null,}) {
+  return _then(_Review(
+id: null == id ? _self.id : id // ignore: cast_nullable_to_non_nullable
+as String,author: null == author ? _self.author : author // ignore: cast_nullable_to_non_nullable
+as String,content: freezed == content ? _self.content : content // ignore: cast_nullable_to_non_nullable
+as String?,createdAt: freezed == createdAt ? _self.createdAt : createdAt // ignore: cast_nullable_to_non_nullable
+as String?,updatedAt: freezed == updatedAt ? _self.updatedAt : updatedAt // ignore: cast_nullable_to_non_nullable
+as String?,authorDetails: null == authorDetails ? _self.authorDetails : authorDetails // ignore: cast_nullable_to_non_nullable
+as AuthorDetails,
+  ));
+}
+
+/// Create a copy of Review
+/// with the given fields replaced by the non-null parameter values.
+@override
+@pragma('vm:prefer-inline')
+$AuthorDetailsCopyWith<$Res> get authorDetails {
+  
+  return $AuthorDetailsCopyWith<$Res>(_self.authorDetails, (value) {
+    return _then(_self.copyWith(authorDetails: value));
+  });
+}
+}
+
 
 /// @nodoc
 mixin _$AuthorDetails {
-  String? get name => throw _privateConstructorUsedError;
-  String? get username => throw _privateConstructorUsedError;
-  int? get rating => throw _privateConstructorUsedError;
-  @JsonKey(name: "avatar_path")
-  String? get avatarPath => throw _privateConstructorUsedError;
+
+ String? get name; String? get username; int? get rating;@JsonKey(name: "avatar_path") String? get avatarPath;
+/// Create a copy of AuthorDetails
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AuthorDetailsCopyWith<AuthorDetails> get copyWith => _$AuthorDetailsCopyWithImpl<AuthorDetails>(this as AuthorDetails, _$identity);
 
   /// Serializes this AuthorDetails to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of AuthorDetails
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AuthorDetailsCopyWith<AuthorDetails> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as AuthorDetails;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AuthorDetails&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.username, _this.username) || other.username == _this.username)&&(identical(other.rating, _this.rating) || other.rating == _this.rating)&&(identical(other.avatarPath, _this.avatarPath) || other.avatarPath == _this.avatarPath));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as AuthorDetails;
+  return Object.hash(runtimeType,_this.name,_this.username,_this.rating,_this.avatarPath);
+}
+
+@override
+String toString() {
+  final _this = this as AuthorDetails;
+  return 'AuthorDetails(name: ${_this.name}, username: ${_this.username}, rating: ${_this.rating}, avatarPath: ${_this.avatarPath})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AuthorDetailsCopyWith<$Res> {
-  factory $AuthorDetailsCopyWith(
-          AuthorDetails value, $Res Function(AuthorDetails) then) =
-      _$AuthorDetailsCopyWithImpl<$Res, AuthorDetails>;
-  @useResult
-  $Res call(
-      {String? name,
-      String? username,
-      int? rating,
-      @JsonKey(name: "avatar_path") String? avatarPath});
-}
+abstract mixin class $AuthorDetailsCopyWith<$Res>  {
+  factory $AuthorDetailsCopyWith(AuthorDetails value, $Res Function(AuthorDetails) _then) = _$AuthorDetailsCopyWithImpl;
+@useResult
+$Res call({
+ String? name, String? username, int? rating,@JsonKey(name: "avatar_path") String? avatarPath
+});
 
+
+
+
+}
 /// @nodoc
-class _$AuthorDetailsCopyWithImpl<$Res, $Val extends AuthorDetails>
+class _$AuthorDetailsCopyWithImpl<$Res>
     implements $AuthorDetailsCopyWith<$Res> {
-  _$AuthorDetailsCopyWithImpl(this._value, this._then);
+  _$AuthorDetailsCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final AuthorDetails _self;
+  final $Res Function(AuthorDetails) _then;
 
-  /// Create a copy of AuthorDetails
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? username = freezed,
-    Object? rating = freezed,
-    Object? avatarPath = freezed,
-  }) {
-    return _then(_value.copyWith(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      avatarPath: freezed == avatarPath
-          ? _value.avatarPath
-          : avatarPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
+/// Create a copy of AuthorDetails
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? name = freezed,Object? username = freezed,Object? rating = freezed,Object? avatarPath = freezed,}) {
+  return _then(AuthorDetails(
+name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,username: freezed == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
+as String?,rating: freezed == rating ? _self.rating : rating // ignore: cast_nullable_to_non_nullable
+as int?,avatarPath: freezed == avatarPath ? _self.avatarPath : avatarPath // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$AuthorDetailsImplCopyWith<$Res>
-    implements $AuthorDetailsCopyWith<$Res> {
-  factory _$$AuthorDetailsImplCopyWith(
-          _$AuthorDetailsImpl value, $Res Function(_$AuthorDetailsImpl) then) =
-      __$$AuthorDetailsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String? name,
-      String? username,
-      int? rating,
-      @JsonKey(name: "avatar_path") String? avatarPath});
 }
 
-/// @nodoc
-class __$$AuthorDetailsImplCopyWithImpl<$Res>
-    extends _$AuthorDetailsCopyWithImpl<$Res, _$AuthorDetailsImpl>
-    implements _$$AuthorDetailsImplCopyWith<$Res> {
-  __$$AuthorDetailsImplCopyWithImpl(
-      _$AuthorDetailsImpl _value, $Res Function(_$AuthorDetailsImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of AuthorDetails
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? name = freezed,
-    Object? username = freezed,
-    Object? rating = freezed,
-    Object? avatarPath = freezed,
-  }) {
-    return _then(_$AuthorDetailsImpl(
-      name: freezed == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String?,
-      username: freezed == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String?,
-      rating: freezed == rating
-          ? _value.rating
-          : rating // ignore: cast_nullable_to_non_nullable
-              as int?,
-      avatarPath: freezed == avatarPath
-          ? _value.avatarPath
-          : avatarPath // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [AuthorDetails].
+extension AuthorDetailsPatterns on AuthorDetails {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _AuthorDetails value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _AuthorDetails() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _AuthorDetails value)  $default,){
+final _that = this;
+switch (_that) {
+case _AuthorDetails():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _AuthorDetails value)?  $default,){
+final _that = this;
+switch (_that) {
+case _AuthorDetails() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String? name,  String? username,  int? rating, @JsonKey(name: "avatar_path")  String? avatarPath)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _AuthorDetails() when $default != null:
+return $default(_that.name,_that.username,_that.rating,_that.avatarPath);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String? name,  String? username,  int? rating, @JsonKey(name: "avatar_path")  String? avatarPath)  $default,) {final _that = this;
+switch (_that) {
+case _AuthorDetails():
+return $default(_that.name,_that.username,_that.rating,_that.avatarPath);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String? name,  String? username,  int? rating, @JsonKey(name: "avatar_path")  String? avatarPath)?  $default,) {final _that = this;
+switch (_that) {
+case _AuthorDetails() when $default != null:
+return $default(_that.name,_that.username,_that.rating,_that.avatarPath);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$AuthorDetailsImpl implements _AuthorDetails {
-  const _$AuthorDetailsImpl(
-      {this.name,
-      this.username,
-      this.rating,
-      @JsonKey(name: "avatar_path") this.avatarPath});
 
-  factory _$AuthorDetailsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$AuthorDetailsImplFromJson(json);
+class _AuthorDetails implements AuthorDetails {
+  const _AuthorDetails({this.name, this.username, this.rating, @JsonKey(name: "avatar_path") this.avatarPath});
+  factory _AuthorDetails.fromJson(Map<String, dynamic> json) => _$AuthorDetailsFromJson(json);
 
-  @override
-  final String? name;
-  @override
-  final String? username;
-  @override
-  final int? rating;
-  @override
-  @JsonKey(name: "avatar_path")
-  final String? avatarPath;
+@override final  String? name;
+@override final  String? username;
+@override final  int? rating;
+@override@JsonKey(name: "avatar_path") final  String? avatarPath;
 
-  @override
-  String toString() {
+/// Create a copy of AuthorDetails
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$AuthorDetailsCopyWith<_AuthorDetails> get copyWith => __$AuthorDetailsCopyWithImpl<_AuthorDetails>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$AuthorDetailsToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _AuthorDetails&&(identical(other.name, name) || other.name == name)&&(identical(other.username, username) || other.username == username)&&(identical(other.rating, rating) || other.rating == rating)&&(identical(other.avatarPath, avatarPath) || other.avatarPath == avatarPath));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,name,username,rating,avatarPath);
+}
+
+@override
+String toString() {
     return 'AuthorDetails(name: $name, username: $username, rating: $rating, avatarPath: $avatarPath)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AuthorDetailsImpl &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.rating, rating) || other.rating == rating) &&
-            (identical(other.avatarPath, avatarPath) ||
-                other.avatarPath == avatarPath));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, name, username, rating, avatarPath);
-
-  /// Create a copy of AuthorDetails
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AuthorDetailsImplCopyWith<_$AuthorDetailsImpl> get copyWith =>
-      __$$AuthorDetailsImplCopyWithImpl<_$AuthorDetailsImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$AuthorDetailsImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _AuthorDetails implements AuthorDetails {
-  const factory _AuthorDetails(
-          {final String? name,
-          final String? username,
-          final int? rating,
-          @JsonKey(name: "avatar_path") final String? avatarPath}) =
-      _$AuthorDetailsImpl;
 
-  factory _AuthorDetails.fromJson(Map<String, dynamic> json) =
-      _$AuthorDetailsImpl.fromJson;
-
-  @override
-  String? get name;
-  @override
-  String? get username;
-  @override
-  int? get rating;
-  @override
-  @JsonKey(name: "avatar_path")
-  String? get avatarPath;
-
-  /// Create a copy of AuthorDetails
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AuthorDetailsImplCopyWith<_$AuthorDetailsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class _$AuthorDetailsCopyWith<$Res> implements $AuthorDetailsCopyWith<$Res> {
+  factory _$AuthorDetailsCopyWith(_AuthorDetails value, $Res Function(_AuthorDetails) _then) = __$AuthorDetailsCopyWithImpl;
+@override @useResult
+$Res call({
+ String? name, String? username, int? rating,@JsonKey(name: "avatar_path") String? avatarPath
+});
+
+
+
+
+}
+/// @nodoc
+class __$AuthorDetailsCopyWithImpl<$Res>
+    implements _$AuthorDetailsCopyWith<$Res> {
+  __$AuthorDetailsCopyWithImpl(this._self, this._then);
+
+  final _AuthorDetails _self;
+  final $Res Function(_AuthorDetails) _then;
+
+/// Create a copy of AuthorDetails
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? name = freezed,Object? username = freezed,Object? rating = freezed,Object? avatarPath = freezed,}) {
+  return _then(_AuthorDetails(
+name: freezed == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String?,username: freezed == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
+as String?,rating: freezed == rating ? _self.rating : rating // ignore: cast_nullable_to_non_nullable
+as int?,avatarPath: freezed == avatarPath ? _self.avatarPath : avatarPath // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on

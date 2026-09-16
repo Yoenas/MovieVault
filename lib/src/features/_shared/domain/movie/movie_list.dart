@@ -4,7 +4,7 @@ part 'movie_list.freezed.dart';
 part 'movie_list.g.dart';
 
 @freezed
-class Movie with _$Movie {
+abstract class Movie with _$Movie {
   factory Movie({
     // update any properties as needed
     // after update run the code generator again:
@@ -27,7 +27,7 @@ class Movie with _$Movie {
 
 /// List data parsed from the API response (not used directly in the UI)
 @freezed
-class MovieList with _$MovieList {
+abstract class MovieList with _$MovieList {
   factory MovieList({required List<Movie> results}) = _MovieList;
 
   factory MovieList.fromJson(Map<String, dynamic> json) =>

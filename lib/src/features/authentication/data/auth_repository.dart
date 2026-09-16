@@ -9,9 +9,10 @@ import '../domain/user_data.dart';
 class AuthRepository {
   final _firebaseAuth = FirebaseAuth.instance;
   final _firebaseFireStore = FirebaseFirestore.instance;
-  final GoogleSignIn _googleSignIn = GoogleSignIn();
+  final _googleSignIn = GoogleSignIn.instance;
 
   Stream<User?> authStateChanges() => _firebaseAuth.authStateChanges();
+  Stream<User?> userChanges() => _firebaseAuth.userChanges();
   User? get currentUser => _firebaseAuth.currentUser;
 
   Future<void> _saveUserProfile(String uid, UserData user) async {
@@ -38,35 +39,39 @@ class AuthRepository {
   }
 
   Future<UserCredential?> signInWithGoogle() async {
-    // Trigger the authentication flow
-    final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();
-    if (googleUser == null) {
-      return null; // User canceled the sign-in
+    try {
+      // Trigger the authentication flow
+      final GoogleSignInAccount googleUser =
+          await _googleSignIn.authenticate();
+
+      // Obtain the auth details from the request
+      final GoogleSignInAuthentication googleAuth = googleUser.authentication;
+
+      // Create a new credential
+      final credential = GoogleAuthProvider.credential(
+        idToken: googleAuth.idToken,
+      );
+
+      final userData = UserData(
+        email: googleUser.email,
+        username: googleUser.email.split('@').first,
+        name: googleUser.displayName ?? "",
+        birthday: '',
+        imageUrl: googleUser.photoUrl ?? "",
+      );
+      final userCredential =
+          await FirebaseAuth.instance.signInWithCredential(credential);
+      await _saveUserProfile(userCredential.user!.uid, userData);
+
+      // Once signed in, return the UserCredential
+      return userCredential;
+    } on GoogleSignInException catch (e) {
+      // User canceled the sign-in flow
+      if (e.code == GoogleSignInExceptionCode.canceled) {
+        return null;
+      }
+      rethrow;
     }
-
-    // Obtain the auth details from the request
-    final GoogleSignInAuthentication googleAuth =
-        await googleUser.authentication;
-
-    // Create a new credential
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth.accessToken,
-      idToken: googleAuth.idToken,
-    );
-
-    final userData = UserData(
-      email: googleUser.email,
-      username: googleUser.email.split('@').first,
-      name: googleUser.displayName ?? "",
-      birthday: '',
-      imageUrl: googleUser.photoUrl ?? "",
-    );
-    final userCredential =
-        await FirebaseAuth.instance.signInWithCredential(credential);
-    await _saveUserProfile(userCredential.user!.uid, userData);
-
-    // Once signed in, return the UserCredential
-    return userCredential;
   }
 
   Future<void> signOut() {
@@ -96,8 +101,46 @@ class AuthRepository {
     return UserData.from(response);
   }
 
-  Future<void> resetPassword({required email}) {
+  Future<void> resetPassword({required String email}) {
     return _firebaseAuth.sendPasswordResetEmail(email: email);
+  }
+
+  /// Links an email/password credential to the current user.
+  /// Used when a Google-only user wants to also log in with email/password.
+  Future<void> linkEmailPassword({required String email, required String password}) async {
+    final user = currentUser;
+    if (user == null) {
+      throw FirebaseAuthException(
+        code: 'no-current-user',
+        message: 'No user is currently signed in.',
+      );
+    }
+
+    final credential = EmailAuthProvider.credential(
+      email: email,
+      password: password,
+    );
+    await user.linkWithCredential(credential);
+  }
+
+  /// Links a Google credential to the current user.
+  /// Used when an email/password user wants to also sign in with Google.
+  Future<void> linkWithGoogle() async {
+    final user = currentUser;
+    if (user == null) {
+      throw FirebaseAuthException(
+        code: 'no-current-user',
+        message: 'No user is currently signed in.',
+      );
+    }
+
+    final GoogleSignInAccount googleUser = await _googleSignIn.authenticate();
+    final GoogleSignInAuthentication googleAuth = googleUser.authentication;
+
+    final credential = GoogleAuthProvider.credential(
+      idToken: googleAuth.idToken,
+    );
+    await user.linkWithCredential(credential);
   }
 }
 
@@ -114,4 +157,19 @@ final usersCollectionProvider =
     StreamProvider.autoDispose<QuerySnapshot<Map<String, dynamic>>>((ref) {
   final authRepository = ref.watch(authRepositoryProvider);
   return authRepository.watchUsersCollection();
+});
+
+final userChangesProvider = StreamProvider.autoDispose<User?>((ref) {
+  final authRepository = ref.watch(authRepositoryProvider);
+  return authRepository.userChanges();
+});
+
+final hasPasswordProvider = Provider.autoDispose<bool>((ref) {
+  final user = ref.watch(userChangesProvider).value;
+  return user?.providerData.any((info) => info.providerId == 'password') ?? false;
+});
+
+final hasGoogleProvider = Provider.autoDispose<bool>((ref) {
+  final user = ref.watch(userChangesProvider).value;
+  return user?.providerData.any((info) => info.providerId == 'google.com') ?? false;
 });

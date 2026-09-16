@@ -6,22 +6,50 @@ part of 'account_screen_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$accountScreenControllerHash() =>
-    r'e4fa6031ded94424545f6ff1d4ca2011daee3541';
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint, type=warning
 
-/// See also [AccountScreenController].
 @ProviderFor(AccountScreenController)
-final accountScreenControllerProvider =
-    AutoDisposeAsyncNotifierProvider<AccountScreenController, void>.internal(
-  AccountScreenController.new,
-  name: r'accountScreenControllerProvider',
-  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
-      ? null
-      : _$accountScreenControllerHash,
-  dependencies: null,
-  allTransitiveDependencies: null,
-);
+final accountScreenControllerProvider = AccountScreenControllerProvider._();
 
-typedef _$AccountScreenController = AutoDisposeAsyncNotifier<void>;
-// ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member, deprecated_member_use_from_same_package
+final class AccountScreenControllerProvider
+    extends $AsyncNotifierProvider<AccountScreenController, void> {
+  AccountScreenControllerProvider._()
+    : super(
+        from: null,
+        argument: null,
+        retry: null,
+        name: r'accountScreenControllerProvider',
+        isAutoDispose: true,
+        dependencies: null,
+        $allTransitiveDependencies: null,
+      );
+
+  @override
+  String debugGetCreateSourceHash() => _$accountScreenControllerHash();
+
+  @$internal
+  @override
+  AccountScreenController create() => AccountScreenController();
+}
+
+String _$accountScreenControllerHash() =>
+    r'1f8cc2af15aec8e76a264924fa845e2dbe03b87b';
+
+abstract class _$AccountScreenController extends $AsyncNotifier<void> {
+  FutureOr<void> build();
+  @$mustCallSuper
+  @override
+  WhenComplete runBuild() {
+    final ref = this.ref as $Ref<AsyncValue<void>, void>;
+    final element =
+        ref.element
+            as $ClassProviderElement<
+              AnyNotifier<AsyncValue<void>, void>,
+              AsyncValue<void>,
+              Object?,
+              Object?
+            >;
+    return element.handleCreate(ref, build);
+  }
+}

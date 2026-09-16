@@ -90,7 +90,7 @@ Then, follow one of the two approaches below. 👇
 
 ### 1. Using the CLI
 
-Make sure you have the Firebase CLI and [FlutterFire CLI](https://pub.dev/packages/flutterfire_cli) installed.
+Make sure you have the [Firebase CLI](https://firebase.google.com/docs/cli) and [FlutterFire CLI](https://pub.dev/packages/flutterfire_cli) installed.
 
 Then run this on the terminal from the root of this project:
 

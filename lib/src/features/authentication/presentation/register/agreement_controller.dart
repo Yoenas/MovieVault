@@ -17,13 +17,16 @@ class AgreementController extends _$AgreementController {
     final email = ref.read(emailFieldProvider);
     final password = ref.read(passwordFieldProvider);
     final userData = ref.read(userDataRegisterProvider);
-    state = const AsyncLoading();
-    state = await AsyncValue.guard(() {
+    state = const AsyncValue.loading();
+    final newState = await AsyncValue.guard(() {
       return authRepository.register(
         email: email,
         password: password,
         user: userData,
       );
     });
+    if (ref.mounted) {
+      state = newState;
+    }
   }
 }

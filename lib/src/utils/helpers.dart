@@ -26,7 +26,7 @@ String getCountryName(String code) {
   return kCountryLanguages[code]!;
 }
 
-/// converts genre ids List<int> into genre names String
+/// converts genre ids `List<int>` into genre names String
 ///
 /// from [1, 2, 3] become [drama, action, comedy]
 String getListGenres(List<int>? genreIds) {
@@ -45,7 +45,7 @@ String getListGenres(List<int>? genreIds) {
   return listGenre.join(', ');
 }
 
-/// converts list genre from List<int> to String
+/// converts list genre from `List<int>` to String
 ///
 /// from [1, 2, 3] become "1, 2, 3"
 String genreIdsToString(List<int> genreIds) {

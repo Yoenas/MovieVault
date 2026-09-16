@@ -13,8 +13,8 @@ class LoginSSO extends ConsumerWidget {
         BuilderButtonOAuth(
           accountType: 'Google',
           svgIcon: 'assets/svg/auth/google.svg',
-          onClick: () {
-            ref.read(oAuthControllerProvider.notifier).signInWithGoogle();
+          onClick: () async {
+            await ref.read(oAuthControllerProvider.notifier).signInWithGoogle();
           },
         ),
         // const SizedBox(height: 16),

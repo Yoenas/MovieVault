@@ -20,6 +20,6 @@ class SearchService {
   }
 }
 
-final searchQueryProvider = StateProvider<String>((ref) => '');
+final searchQueryProvider = NotifierProvider<GenericStateNotifier<String>, String>(() => GenericStateNotifier<String>(() => ''));
 
 final searchProvider = Provider<SearchService>((ref) => SearchService(ref));

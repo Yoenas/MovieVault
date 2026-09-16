@@ -35,7 +35,7 @@ class DetailHeader extends StatelessWidget {
                     filter: ImageFilter.blur(sigmaX: 5.0, sigmaY: 5.0),
                     child: Container(
                       decoration: BoxDecoration(
-                        color: MyColors.black.withOpacity(0.0),
+                        color: MyColors.black.withValues(alpha: 0.0),
                       ),
                     ),
                   ),
@@ -54,10 +54,10 @@ class DetailHeader extends StatelessWidget {
               gradient: LinearGradient(
                 colors: [
                   MyColors.black,
-                  MyColors.black.withOpacity(0.8),
-                  MyColors.black.withOpacity(0.5),
-                  MyColors.black.withOpacity(0.3),
-                  MyColors.black.withOpacity(0),
+                  MyColors.black.withValues(alpha: 0.8),
+                  MyColors.black.withValues(alpha: 0.5),
+                  MyColors.black.withValues(alpha: 0.3),
+                  MyColors.black.withValues(alpha: 0),
                 ],
                 begin: Alignment.bottomCenter,
                 end: Alignment.topCenter,

@@ -66,10 +66,10 @@ class CarouselTrending extends ConsumerWidget {
                             gradient: LinearGradient(
                               colors: [
                                 MyColors.black,
-                                MyColors.black.withOpacity(0.8),
-                                MyColors.black.withOpacity(0.5),
-                                MyColors.black.withOpacity(0.3),
-                                MyColors.black.withOpacity(0),
+                                MyColors.black.withValues(alpha: 0.8),
+                                MyColors.black.withValues(alpha: 0.5),
+                                MyColors.black.withValues(alpha: 0.3),
+                                MyColors.black.withValues(alpha: 0),
                               ],
                               begin: Alignment.bottomCenter,
                               end: Alignment.center,

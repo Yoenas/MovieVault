@@ -6,37 +6,34 @@ part of 'detail_movie.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$GenresImpl _$$GenresImplFromJson(Map<String, dynamic> json) => _$GenresImpl(
-      id: (json['id'] as num).toInt(),
-      name: json['name'] as String,
-    );
+_Genres _$GenresFromJson(Map<String, dynamic> json) =>
+    _Genres(id: (json['id'] as num).toInt(), name: json['name'] as String);
 
-Map<String, dynamic> _$$GenresImplToJson(_$GenresImpl instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-    };
+Map<String, dynamic> _$GenresToJson(_Genres instance) => <String, dynamic>{
+  'id': instance.id,
+  'name': instance.name,
+};
 
-_$DetailMovieImpl _$$DetailMovieImplFromJson(Map<String, dynamic> json) =>
-    _$DetailMovieImpl(
-      id: (json['id'] as num).toInt(),
-      title: json['title'] as String,
-      overview: json['overview'] as String?,
-      runtime: (json['runtime'] as num?)?.toInt(),
-      status: json['status'] as String?,
-      releaseDate: json['release_date'] as String?,
-      voteAverage: (json['vote_average'] as num?)?.toDouble(),
-      backdropPath: json['backdrop_path'] as String?,
-      posterPath: json['poster_path'] as String?,
-      originalLanguage: json['original_language'] as String?,
-      originalTitle: json['original_title'] as String?,
-      genres: (json['genres'] as List<dynamic>?)
-              ?.map((e) => Genres.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          const [],
-    );
+_DetailMovie _$DetailMovieFromJson(Map<String, dynamic> json) => _DetailMovie(
+  id: (json['id'] as num).toInt(),
+  title: json['title'] as String,
+  overview: json['overview'] as String?,
+  runtime: (json['runtime'] as num?)?.toInt(),
+  status: json['status'] as String?,
+  releaseDate: json['release_date'] as String?,
+  voteAverage: (json['vote_average'] as num?)?.toDouble(),
+  backdropPath: json['backdrop_path'] as String?,
+  posterPath: json['poster_path'] as String?,
+  originalLanguage: json['original_language'] as String?,
+  originalTitle: json['original_title'] as String?,
+  genres:
+      (json['genres'] as List<dynamic>?)
+          ?.map((e) => Genres.fromJson(e as Map<String, dynamic>))
+          .toList() ??
+      const [],
+);
 
-Map<String, dynamic> _$$DetailMovieImplToJson(_$DetailMovieImpl instance) =>
+Map<String, dynamic> _$DetailMovieToJson(_DetailMovie instance) =>
     <String, dynamic>{
       'id': instance.id,
       'title': instance.title,

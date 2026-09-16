@@ -4,7 +4,7 @@ part 'peoples.freezed.dart';
 part 'peoples.g.dart';
 
 @freezed
-class Peoples with _$Peoples {
+abstract class Peoples with _$Peoples {
   const factory Peoples({
     required int id,
     @Default([]) List<Cast> cast,
@@ -16,7 +16,7 @@ class Peoples with _$Peoples {
 }
 
 @freezed
-class Cast with _$Cast {
+abstract class Cast with _$Cast {
   const factory Cast({
     required int id,
     String? name,

@@ -1,35 +1,32 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../application/user_providers.dart';
 import '../../data/auth_repository.dart';
 
-part 'form_login_controller.g.dart';
+part 'link_provider_controller.g.dart';
 
 @riverpod
-class FormLoginController extends _$FormLoginController {
+class LinkProviderController extends _$LinkProviderController {
   @override
   FutureOr<void> build() {
     // no-op
   }
 
-  Future<void> signIn() async {
+  Future<void> linkPassword(String email, String password) async {
     final authRepository = ref.read(authRepositoryProvider);
-    final email = ref.read(emailFieldProvider);
-    final password = ref.read(passwordFieldProvider);
     state = const AsyncValue.loading();
     final newState = await AsyncValue.guard(() {
-      return authRepository.signIn(email: email, password: password);
+      return authRepository.linkEmailPassword(email: email, password: password);
     });
     if (ref.mounted) {
       state = newState;
     }
   }
 
-  Future<void> resetPassword(String email) async {
+  Future<void> linkGoogle() async {
     final authRepository = ref.read(authRepositoryProvider);
     state = const AsyncValue.loading();
     final newState = await AsyncValue.guard(() {
-      return authRepository.resetPassword(email: email);
+      return authRepository.linkWithGoogle();
     });
     if (ref.mounted) {
       state = newState;

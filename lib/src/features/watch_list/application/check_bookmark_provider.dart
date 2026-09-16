@@ -1,7 +1,7 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:movie_vault/src/commons.dart';
 
-final isBookmarkProvider = StateProvider<bool>((ref) => false);
+final isBookmarkProvider = NotifierProvider<GenericStateNotifier<bool>, bool>(() => GenericStateNotifier<bool>(() => false));
 
 final checkIsBookmarkProvider = FutureProvider.autoDispose<bool>((ref) async {
   final id = ref.watch(idMovieProvider);

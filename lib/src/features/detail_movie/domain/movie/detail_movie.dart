@@ -4,7 +4,7 @@ part 'detail_movie.freezed.dart';
 part 'detail_movie.g.dart';
 
 @freezed
-class Genres with _$Genres {
+abstract class Genres with _$Genres {
   factory Genres({
     required int id,
     required String name,
@@ -14,7 +14,7 @@ class Genres with _$Genres {
 }
 
 @freezed
-class DetailMovie with _$DetailMovie {
+abstract class DetailMovie with _$DetailMovie {
   factory DetailMovie({
     required int id,
     required String title,

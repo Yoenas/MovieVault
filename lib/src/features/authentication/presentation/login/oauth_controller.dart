@@ -13,8 +13,12 @@ class OAuthController extends _$OAuthController {
 
   Future<void> signInWithGoogle() async {
     final authRepository = ref.read(authRepositoryProvider);
-    state = await AsyncValue.guard(() {
+    state = const AsyncValue.loading();
+    final newState = await AsyncValue.guard(() {
       return authRepository.signInWithGoogle();
     });
+    if (ref.mounted) {
+      state = newState;
+    }
   }
 }

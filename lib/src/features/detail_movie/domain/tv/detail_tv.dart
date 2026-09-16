@@ -6,7 +6,7 @@ part 'detail_tv.freezed.dart';
 part 'detail_tv.g.dart';
 
 @freezed
-class Season with _$Season {
+abstract class Season with _$Season {
   factory Season({
     required int id,
     String? name,
@@ -22,7 +22,7 @@ class Season with _$Season {
 }
 
 @freezed
-class DetailTv with _$DetailTv {
+abstract class DetailTv with _$DetailTv {
   factory DetailTv({
     required int id,
     required String name,

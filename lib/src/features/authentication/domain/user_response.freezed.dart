@@ -1,6 +1,6 @@
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: type=lint
+// coverage:ignore-file
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'user_response.dart';
@@ -9,247 +9,289 @@ part of 'user_response.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-UserResponse _$UserResponseFromJson(Map<String, dynamic> json) {
-  return _UserResponse.fromJson(json);
-}
 
 /// @nodoc
 mixin _$UserResponse {
-  String get email => throw _privateConstructorUsedError;
-  String get username => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  String get birthday => throw _privateConstructorUsedError;
-  @JsonKey(name: 'image_url')
-  String? get imageUrl => throw _privateConstructorUsedError;
+
+ String get email; String get username; String get name; String get birthday;@JsonKey(name: 'image_url') String? get imageUrl;
+/// Create a copy of UserResponse
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$UserResponseCopyWith<UserResponse> get copyWith => _$UserResponseCopyWithImpl<UserResponse>(this as UserResponse, _$identity);
 
   /// Serializes this UserResponse to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  Map<String, dynamic> toJson();
 
-  /// Create a copy of UserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $UserResponseCopyWith<UserResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+
+@override
+bool operator ==(Object other) {
+  final _this = this as UserResponse;
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is UserResponse&&(identical(other.email, _this.email) || other.email == _this.email)&&(identical(other.username, _this.username) || other.username == _this.username)&&(identical(other.name, _this.name) || other.name == _this.name)&&(identical(other.birthday, _this.birthday) || other.birthday == _this.birthday)&&(identical(other.imageUrl, _this.imageUrl) || other.imageUrl == _this.imageUrl));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+  final _this = this as UserResponse;
+  return Object.hash(runtimeType,_this.email,_this.username,_this.name,_this.birthday,_this.imageUrl);
+}
+
+@override
+String toString() {
+  final _this = this as UserResponse;
+  return 'UserResponse(email: ${_this.email}, username: ${_this.username}, name: ${_this.name}, birthday: ${_this.birthday}, imageUrl: ${_this.imageUrl})';
+}
+
+
 }
 
 /// @nodoc
-abstract class $UserResponseCopyWith<$Res> {
-  factory $UserResponseCopyWith(
-          UserResponse value, $Res Function(UserResponse) then) =
-      _$UserResponseCopyWithImpl<$Res, UserResponse>;
-  @useResult
-  $Res call(
-      {String email,
-      String username,
-      String name,
-      String birthday,
-      @JsonKey(name: 'image_url') String? imageUrl});
-}
+abstract mixin class $UserResponseCopyWith<$Res>  {
+  factory $UserResponseCopyWith(UserResponse value, $Res Function(UserResponse) _then) = _$UserResponseCopyWithImpl;
+@useResult
+$Res call({
+ String email, String username, String name, String birthday,@JsonKey(name: 'image_url') String? imageUrl
+});
 
+
+
+
+}
 /// @nodoc
-class _$UserResponseCopyWithImpl<$Res, $Val extends UserResponse>
+class _$UserResponseCopyWithImpl<$Res>
     implements $UserResponseCopyWith<$Res> {
-  _$UserResponseCopyWithImpl(this._value, this._then);
+  _$UserResponseCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final UserResponse _self;
+  final $Res Function(UserResponse) _then;
 
-  /// Create a copy of UserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? email = null,
-    Object? username = null,
-    Object? name = null,
-    Object? birthday = null,
-    Object? imageUrl = freezed,
-  }) {
-    return _then(_value.copyWith(
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      birthday: null == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ) as $Val);
-  }
+/// Create a copy of UserResponse
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? email = null,Object? username = null,Object? name = null,Object? birthday = null,Object? imageUrl = freezed,}) {
+  return _then(UserResponse(
+email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
+as String,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,birthday: null == birthday ? _self.birthday : birthday // ignore: cast_nullable_to_non_nullable
+as String,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
 }
 
-/// @nodoc
-abstract class _$$UserResponseImplCopyWith<$Res>
-    implements $UserResponseCopyWith<$Res> {
-  factory _$$UserResponseImplCopyWith(
-          _$UserResponseImpl value, $Res Function(_$UserResponseImpl) then) =
-      __$$UserResponseImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String email,
-      String username,
-      String name,
-      String birthday,
-      @JsonKey(name: 'image_url') String? imageUrl});
 }
 
-/// @nodoc
-class __$$UserResponseImplCopyWithImpl<$Res>
-    extends _$UserResponseCopyWithImpl<$Res, _$UserResponseImpl>
-    implements _$$UserResponseImplCopyWith<$Res> {
-  __$$UserResponseImplCopyWithImpl(
-      _$UserResponseImpl _value, $Res Function(_$UserResponseImpl) _then)
-      : super(_value, _then);
 
-  /// Create a copy of UserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? email = null,
-    Object? username = null,
-    Object? name = null,
-    Object? birthday = null,
-    Object? imageUrl = freezed,
-  }) {
-    return _then(_$UserResponseImpl(
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      username: null == username
-          ? _value.username
-          : username // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      birthday: null == birthday
-          ? _value.birthday
-          : birthday // ignore: cast_nullable_to_non_nullable
-              as String,
-      imageUrl: freezed == imageUrl
-          ? _value.imageUrl
-          : imageUrl // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
+/// Adds pattern-matching-related methods to [UserResponse].
+extension UserResponsePatterns on UserResponse {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>(TResult Function( _UserResponse value)?  $default,{required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _UserResponse() when $default != null:
+return $default(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>(TResult Function( _UserResponse value)  $default,){
+final _that = this;
+switch (_that) {
+case _UserResponse():
+return $default(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>(TResult? Function( _UserResponse value)?  $default,){
+final _that = this;
+switch (_that) {
+case _UserResponse() when $default != null:
+return $default(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>(TResult Function( String email,  String username,  String name,  String birthday, @JsonKey(name: 'image_url')  String? imageUrl)?  $default,{required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _UserResponse() when $default != null:
+return $default(_that.email,_that.username,_that.name,_that.birthday,_that.imageUrl);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>(TResult Function( String email,  String username,  String name,  String birthday, @JsonKey(name: 'image_url')  String? imageUrl)  $default,) {final _that = this;
+switch (_that) {
+case _UserResponse():
+return $default(_that.email,_that.username,_that.name,_that.birthday,_that.imageUrl);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>(TResult? Function( String email,  String username,  String name,  String birthday, @JsonKey(name: 'image_url')  String? imageUrl)?  $default,) {final _that = this;
+switch (_that) {
+case _UserResponse() when $default != null:
+return $default(_that.email,_that.username,_that.name,_that.birthday,_that.imageUrl);case _:
+  return null;
+
+}
+}
+
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$UserResponseImpl implements _UserResponse {
-  const _$UserResponseImpl(
-      {required this.email,
-      required this.username,
-      required this.name,
-      required this.birthday,
-      @JsonKey(name: 'image_url') this.imageUrl});
 
-  factory _$UserResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UserResponseImplFromJson(json);
+class _UserResponse implements UserResponse {
+  const _UserResponse({required this.email, required this.username, required this.name, required this.birthday, @JsonKey(name: 'image_url') this.imageUrl});
+  factory _UserResponse.fromJson(Map<String, dynamic> json) => _$UserResponseFromJson(json);
 
-  @override
-  final String email;
-  @override
-  final String username;
-  @override
-  final String name;
-  @override
-  final String birthday;
-  @override
-  @JsonKey(name: 'image_url')
-  final String? imageUrl;
+@override final  String email;
+@override final  String username;
+@override final  String name;
+@override final  String birthday;
+@override@JsonKey(name: 'image_url') final  String? imageUrl;
 
-  @override
-  String toString() {
+/// Create a copy of UserResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$UserResponseCopyWith<_UserResponse> get copyWith => __$UserResponseCopyWithImpl<_UserResponse>(this, _$identity);
+
+@override
+Map<String, dynamic> toJson() {
+  return _$UserResponseToJson(this, );
+}
+
+@override
+bool operator ==(Object other) {
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _UserResponse&&(identical(other.email, email) || other.email == email)&&(identical(other.username, username) || other.username == username)&&(identical(other.name, name) || other.name == name)&&(identical(other.birthday, birthday) || other.birthday == birthday)&&(identical(other.imageUrl, imageUrl) || other.imageUrl == imageUrl));
+}
+
+@JsonKey(includeFromJson: false, includeToJson: false)
+@override
+int get hashCode {
+    return Object.hash(runtimeType,email,username,name,birthday,imageUrl);
+}
+
+@override
+String toString() {
     return 'UserResponse(email: $email, username: $username, name: $name, birthday: $birthday, imageUrl: $imageUrl)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$UserResponseImpl &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.username, username) ||
-                other.username == username) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.birthday, birthday) ||
-                other.birthday == birthday) &&
-            (identical(other.imageUrl, imageUrl) ||
-                other.imageUrl == imageUrl));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, email, username, name, birthday, imageUrl);
-
-  /// Create a copy of UserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UserResponseImplCopyWith<_$UserResponseImpl> get copyWith =>
-      __$$UserResponseImplCopyWithImpl<_$UserResponseImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UserResponseImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _UserResponse implements UserResponse {
-  const factory _UserResponse(
-      {required final String email,
-      required final String username,
-      required final String name,
-      required final String birthday,
-      @JsonKey(name: 'image_url') final String? imageUrl}) = _$UserResponseImpl;
 
-  factory _UserResponse.fromJson(Map<String, dynamic> json) =
-      _$UserResponseImpl.fromJson;
-
-  @override
-  String get email;
-  @override
-  String get username;
-  @override
-  String get name;
-  @override
-  String get birthday;
-  @override
-  @JsonKey(name: 'image_url')
-  String? get imageUrl;
-
-  /// Create a copy of UserResponse
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UserResponseImplCopyWith<_$UserResponseImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
+
+/// @nodoc
+abstract mixin class _$UserResponseCopyWith<$Res> implements $UserResponseCopyWith<$Res> {
+  factory _$UserResponseCopyWith(_UserResponse value, $Res Function(_UserResponse) _then) = __$UserResponseCopyWithImpl;
+@override @useResult
+$Res call({
+ String email, String username, String name, String birthday,@JsonKey(name: 'image_url') String? imageUrl
+});
+
+
+
+
+}
+/// @nodoc
+class __$UserResponseCopyWithImpl<$Res>
+    implements _$UserResponseCopyWith<$Res> {
+  __$UserResponseCopyWithImpl(this._self, this._then);
+
+  final _UserResponse _self;
+  final $Res Function(_UserResponse) _then;
+
+/// Create a copy of UserResponse
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? email = null,Object? username = null,Object? name = null,Object? birthday = null,Object? imageUrl = freezed,}) {
+  return _then(_UserResponse(
+email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
+as String,username: null == username ? _self.username : username // ignore: cast_nullable_to_non_nullable
+as String,name: null == name ? _self.name : name // ignore: cast_nullable_to_non_nullable
+as String,birthday: null == birthday ? _self.birthday : birthday // ignore: cast_nullable_to_non_nullable
+as String,imageUrl: freezed == imageUrl ? _self.imageUrl : imageUrl // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+// dart format on
